@@ -9,13 +9,13 @@
           const queryString = window.location.search;
           const redirectUrl = queryString.split("://")[0].substr(1) + "://" + queryString.split("://")[1];
           
-          // Trigger the redirect
-          window.location.href = redirectUrl;
+          // Open the URL in a new tab
+          window.open(redirectUrl, '_blank');
 
-          // Attempt to close the window after redirect
+          // Attempt to close the window after opening new tab
           setTimeout(function() {
             window.open('','_self').close();
-          }, 1000); // Allow time for redirect before attempting to close the tab
+          }, 100); // Short delay to ensure the new tab opens before closing attempt
         }
       };
     </script>
