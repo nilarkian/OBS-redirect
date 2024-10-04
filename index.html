@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<script>
-(function() {
-    if (window.location.search) {
-        const queryString = window.location.search;
-        const redirectUrl = queryString.split("://")[0].substr(1) + "://" + queryString.split("://")[1];
-        
-        // Attempt to close the window
-        window.close();
-        
-        // If closing fails, redirect and try to close again
-        setTimeout(function() {
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script>
+    (function() {
+        if (window.location.search) {
+            const queryString = window.location.search;
+            const redirectUrl = queryString.split("://")[0].substr(1) + "://" + queryString.split("://")[1];
             window.location.replace(redirectUrl);
-            
-            // Try to close again after redirection
-            setTimeout(window.close, 100);
-        }, 50);
-    }
-})();
-</script>
+        }
+    })();
+    </script>
+</head>
+<body>
+</body>
+</html>
