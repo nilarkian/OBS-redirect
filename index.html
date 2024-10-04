@@ -12,10 +12,10 @@
           // Trigger the redirect
           window.location.href = redirectUrl;
 
-          // Attempt to close the window after redirect
+          // Attempt to close the tab after 3 seconds
           setTimeout(function() {
             window.open('','_self').close();
-          }, 1000); // Allow time for redirect before attempting to close the tab
+          }, 2500); // Wait 3 seconds, then try to close the tab
         }
       };
     </script>
