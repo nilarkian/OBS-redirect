@@ -1,37 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="UTF-8">
     <title>Redirecting...</title>
     <script>
-    window.onload = function() {
+      window.onload = function() {
         if (window.location.search) {
-            const queryString = window.location.search;
-            const redirectUrl = queryString.split("://")[0].substr(1) + "://" + queryString.split("://")[1];
-            
-            // Attempt to close the tab immediately
-            window.close();
-            
-            // If the tab doesn't close, redirect after a short delay
-            setTimeout(function() {
-                window.location.href = redirectUrl;
-            }, 100);
-            
-            // Second attempt to close the tab after redirection
-            setTimeout(function() {
-                window.close();
-            }, 1000);
+          const queryString = window.location.search;
+          const redirectUrl = queryString.split("://")[0].substr(1) + "://" + queryString.split("://")[1];
+          window.location.href = redirectUrl;
         }
-    };
+      };
     </script>
-</head>
-<body>
-    <p>Redirecting... If you are not redirected, <a id="manual-redirect" href="#">click here</a>.</p>
-    <script>
-    document.getElementById('manual-redirect').onclick = function(e) {
-        e.preventDefault();
-        window.location.href = redirectUrl;
-    };
-    </script>
-</body>
+  </head>
+  <body>
+  </body>
 </html>
