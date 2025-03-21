@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Redirecting...</title>
-    <script>
-        location.replace(location.search.slice(1));
-    </script>
-</head>
-<body></body>
-</html>
+<script>
+    location.href = location.search.slice(1);
+    window.close();
+</script>
