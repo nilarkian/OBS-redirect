@@ -1,25 +1,12 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="UTF-8">
     <title>Redirecting...</title>
     <script>
-      window.onload = function() {
-        if (window.location.search) {
-          const queryString = window.location.search;
-          const redirectUrl = queryString.split("://")[0].substr(1) + "://" + queryString.split("://")[1];
-          
-          // Trigger the redirect
-          window.location.href = redirectUrl;
-
-          // Attempt to close the window after redirect
-          setTimeout(function() {
-            window.open('','_self').close();
-          }, 1000); // Allow time for redirect before attempting to close the tab
-        }
-      };
+        location.href = location.search.slice(1);
     </script>
-  </head>
-  <body>
-  </body>
+</head>
+<body>
+</body>
 </html>
