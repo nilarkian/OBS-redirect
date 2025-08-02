@@ -8,12 +8,13 @@
         location.replace(url); // Fast redirect without history entry
 
         setTimeout(() => {
-            window.open('', '_self').close(); // Attempts to close the tab
+            window.open('', '_self');// .close(); // Attempts to close the tab
         }, 50000); // Short delay to allow redirect before closing
     </script>
 </head>
 <body></body>
 </html>
+
 
 
 
